@@ -1,0 +1,426 @@
+@import url(https://fonts.googleapis.com/css?family=League+Spartan:100,200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900);
+
+h1,
+h2,
+h3 {
+  font-family: "League Spartan";
+}
+
+body {
+  background-color: #262a32;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  border-radius: 20px;
+}
+
+/* Main class for the border animation effect */
+nav a:before,
+nav a:after {
+  position: absolute;
+  opacity: 0.5;
+  height: 100%;
+  width: 2px;
+  content: "";
+  background: #361c51;
+  transition: all 0.3s;
+}
+
+/* Left border */
+nav a:before {
+  left: 0;
+  top: 0;
+}
+
+/* Right border */
+nav a:after {
+  right: 0;
+  bottom: 0;
+}
+
+/* Hover effect changes borders to top and bottom */
+nav a:hover:before,
+nav a:hover:after {
+  opacity: 1;
+  height: 2px;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  margin: 0;
+}
+
+nav {
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li a {
+  text-decoration: none;
+
+  font-family: "Titillium Web";
+}
+
+nav ul li a:hover {
+  color: #361c51;
+}
+
+section {
+  padding: 50px;
+}
+
+#header {
+  background: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("assets/circuitpattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#header h1 {
+  font-family: "Titillium Web";
+}
+
+#about-me {
+  display: flex;
+  flex-direction: row;
+  background: #32174d;
+  color: white;
+  font-size: 1.5em;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+  background-image: url("assets/binarypattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "League Spartan";
+}
+
+.about-text {
+  flex: 2;
+  padding: 10px;
+}
+
+.monitor-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.monitor-frame {
+  max-width: 100%;
+  height: auto;
+  z-index: 2;
+  animation: smoothRotate 8s ease-in-out infinite;
+}
+
+@keyframes smoothRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* .monitor-screen {
+  position: absolute;
+  top: 132%;
+  width: 13%;
+  left: 67.5%;
+  height: 33%;
+  background: black;
+  overflow: hidden;
+  z-index: 1; 
+} */
+
+/* .scrolling-text {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  animation: scroll 20s linear infinite;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+} */
+
+@keyframes scroll {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+#projects {
+  background: #2e9587;
+  display: flex;
+  flex-direction: column;
+  background-image: url("assets/binarypattern2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#contact {
+  background: #d6d6d6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.techs {
+  background: #282c34;
+  padding: 20px;
+  text-align: center;
+  background-image: url("assets/circuitpattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "League Spartan";
+}
+
+.tech-list {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.61);
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.tech-item img {
+  width: 70px;
+  height: 70px;
+}
+
+.tech-item p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.rotating-image {
+  width: 200px;
+  display: block;
+  margin: 50px auto;
+  animation: rotateBackAndForth 4s ease-in-out infinite;
+}
+
+@keyframes rotateBackAndForth {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.category {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-family: "League Spartan";
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: #f9f9f9;
+  color: black;
+  max-width: 350px;
+  align-items: center;
+}
+.logic-project {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: #f9f9f9;
+  color: black;
+  max-width: 350px;
+  align-items: center;
+}
+
+.logic-project img {
+  width: 350px;
+  border-radius: 10px;
+}
+
+.project img {
+  width: 350px;
+  border-radius: 10px;
+}
+.project h3,
+.logic-project h3 {
+  color: #361c51;
+  margin: 10px 0;
+  font-size: 1.5em;
+  font-family: "League Spartan";
+}
+
+.project button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.project button:hover {
+  background-color: #0056b3;
+}
+
+.project-details {
+  margin-top: 10px;
+  color: black;
+}
+
+.project-details img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.icon-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.icons {
+  display: inline-block;
+  max-width: 40px;
+  height: auto;
+}
+
+.footer {
+  padding: 50px;
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+  background-image: url("assets/circuitpattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-heading {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.footer-description {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  max-width: 400px;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-button {
+  text-decoration: none;
+  color: white;
+  border: 2px solid;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.contact-button.github {
+  border-color: #555;
+}
+
+.contact-button.github:hover {
+  background: #555;
+}
+
+.contact-button.linkedin {
+  border-color: #0a66c2;
+}
+
+.contact-button.linkedin:hover {
+  background: #0a66c2;
+}
+
+.back-to-top {
+  display: inline-block;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 20px;
+  border-bottom: 1px dashed #aaa;
+  transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+  color: white;
+}
