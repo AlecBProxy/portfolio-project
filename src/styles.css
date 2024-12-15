@@ -289,7 +289,14 @@ html {
   color: black;
   max-width: 350px;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 .logic-project {
   display: flex;
   flex-direction: column;
@@ -301,6 +308,12 @@ html {
   color: black;
   max-width: 350px;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logic-project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .logic-project img {
