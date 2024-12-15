@@ -188,6 +188,8 @@ section {
 #projects {
   background: #2e9587;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   flex-direction: column;
   background-image: url("assets/binarypattern2.png");
   background-size: cover;
@@ -423,4 +425,43 @@ html {
 
 .back-to-top:hover {
   color: white;
+}
+
+@media (max-width: 768px) {
+  #projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about-me {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text,
+  .monitor-container {
+    flex: none;
+    max-width: 100%;
+  }
+
+  .monitor-container {
+    margin-top: 20px;
+  }
+
+  .project img,
+  .logic-project img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tech-list {
+    flex-direction: column;
+    padding: 10px;
+  }
 }
